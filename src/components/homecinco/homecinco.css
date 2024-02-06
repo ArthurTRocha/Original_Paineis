@@ -1,0 +1,84 @@
+.homeCinco {
+    background-color: #000;
+    padding-bottom: 7%;
+    padding-top: 2%;
+}
+.homeCincoo {
+    max-width: 2000px;
+    margin: auto;
+}
+.unirTextosImagemHomeCinco {
+    display: flex;
+    gap: 30%;
+    align-items: center;
+}
+.textoHomeCinco {
+    color: #fff;
+    margin-left: 3.5%;
+    width: 35%;
+}
+.textoHomeCinco h1 {
+    font-size: clamp(2rem,2rem + 1.2vw,3rem);
+}
+.textoHomeCinco p {
+    font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
+    margin-top: 4%;
+}
+.imagemHomeCinco img {
+    max-width: 60%;
+    object-fit: cover;
+}
+.imagemHomeCinco {
+    margin-top: 5%;
+}
+.contatoHomeCinco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.contatoHomeCinco form {
+    width: 50%;
+}
+.contatoHomeCinco input{
+    width: 100%;
+    height: 40px;
+    border-radius: 2vh;
+    border: none;
+    margin-top: 2%;
+    padding-left: 2%;
+}
+.contatoHomeCinco select{
+    width: 100%;
+    height: 40px;
+    border-radius: 2vh;
+    border: none;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.telefoneSelecioneHomeCinco {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2%;
+    width: 100%;
+    margin-top: 1%;
+}
+.contatoHomeCinco button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3%;
+    background-color: transparent;
+    border: 1px solid #ED8600;
+    color: #fff;
+    border-radius: 2.5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.contatoHomeCinco button:hover {
+    transform: translateX(-50%) scale(1.2);
+}

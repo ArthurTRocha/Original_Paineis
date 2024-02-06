@@ -1,0 +1,106 @@
+.homeDois {
+    background: linear-gradient(to bottom right, black 50%, white 50%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.homeDoiss {
+    max-width: 2000px;
+    margin: auto;
+    display: flex;
+    gap: 5%;
+}
+.textosHomeDois {
+    width: 40%;
+    margin-left: 3.5%;
+}
+.textosHomeDois h1 {
+    font-size: clamp(2rem,2rem + 1.2vw,3rem);
+    color: #fff;
+}
+.textosHomeDois p {
+    font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
+    color: #fff;
+    margin-top: 5%;
+}
+.textosHomeDois button {
+    background-color: #ED8600;
+    border: none;
+    color: #fff;
+    border-radius: 2vh;
+    font-size: clamp(1rem,1rem + 1.2vw,1.2rem);
+    margin-top: 8%;
+    padding-left: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+.textosHomeDois button:hover {
+    transform: scale(1.2);
+}
+.cardsServicosHomeDois{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 7px;
+    width: 50%;
+}
+.cardUmHD {
+    background: linear-gradient(90deg, #FFB75E 0%, #ED8600 100%);
+    box-shadow: 8px 11px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 20%;
+    padding-top: 2%;
+}
+.cardUmHD p{
+    padding-top: 15%;
+}
+.cardDoisHD {
+    background: linear-gradient(90deg, #FFB75E 0%, #ED8600 100%);
+    box-shadow: 8px 11px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 20%;
+    padding-top: 2%;
+}
+.cardDoisHD p{
+    padding-top: 15%;
+}
+.cardTresHD {
+    background: linear-gradient(90deg, #FFB75E 0%, #ED8600 100%);
+    box-shadow: 8px 11px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 20%;
+    padding-top: 2%;
+}
+.cardTresHD p{
+    padding-top: 15%;
+}
+.cardQuatroHD {
+    background: linear-gradient(90deg, #FFB75E 0%, #ED8600 100%);
+    box-shadow: 8px 11px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 20%;
+    padding-top: 2%;
+}
+.cardQuatroHD p{
+    padding-top: 15%;
+}

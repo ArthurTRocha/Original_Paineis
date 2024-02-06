@@ -1,0 +1,42 @@
+.homeQuatro {
+    background-image: url('../../assets/images/fundo_hometres.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    position: relative;
+    padding-bottom: 7%;
+}
+.homeQuatro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+.homeQuatroo {
+    max-width: 2000px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.homeQuatroo h1 {
+    color: #fff;
+    margin-left: 3.5%;
+    font-size: clamp(2rem,2rem + 1.2vw,3rem);
+}
+.conteudoHomeQuatro p {
+    color: #fff;
+    text-align: center;
+    width: 60%;
+    font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
+    word-spacing: 0.2em;
+}
+.conteudoHomeQuatro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}

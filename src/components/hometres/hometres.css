@@ -1,0 +1,32 @@
+.homeTres {
+    max-width: 2000px;
+    margin: auto;
+}
+.homeTress h1 {
+    margin-left: 3.5%;
+}
+.finalHomeTres h2 {
+    width: 70%;
+    text-align: center;
+}
+.finalHomeTres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.finalHomeTres button {
+    background-color: #ED8600;
+    border: none;
+    color: #Fff;
+    border-radius: 4vh;
+    padding-left: 4%;
+    padding-right: 4%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.finalHomeTres button:hover {
+    transform: scale(1.2);
+}
