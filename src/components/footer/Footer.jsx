@@ -18,8 +18,13 @@ function Footer () {
             </div>
 
             <div className="redesSociaisFooter">
+                <a href="http://www.tiktok.com/@originalpaineis" target="blank">
                 <FaTiktok/>
+                </a>
+
+                <a href="https://www.instagram.com/originalpaineis?igsh=czVuMTBvaHZhZXBk" target="blank">
                 <FaInstagram/>
+                </a>
             </div>
 
             <div className="informacoesFooter">
@@ -27,7 +32,7 @@ function Footer () {
 
                 <div className="emailInfoFooter">
                 <MdOutlineEmail className="iconeFooter"/>
-                <p>Comercial@originalpainies.com.br</p>
+                <p>comercial@originalpaineis.com</p>
                 </div>
                 
                 <div className="telefoneInfoFooter">

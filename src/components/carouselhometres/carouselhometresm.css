@@ -1,0 +1,11 @@
+.imagensCarouselHomeTresM img {
+    object-fit: cover;
+    max-width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.imagensCarouselHomeTresM {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

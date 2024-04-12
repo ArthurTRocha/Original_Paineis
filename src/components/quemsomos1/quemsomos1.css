@@ -1,0 +1,137 @@
+.quemSomos1 {
+    max-width: 2000px;
+    margin: auto;
+    padding-top: 2%;
+    margin-bottom: 5%;
+}
+.quemSomoss1 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.quemSomoss1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 180px; 
+    width: 170px; 
+    height: 62px; 
+    background: url("../../assets/images/retangulo.png") no-repeat;
+    background-size: cover;
+    z-index: 1; 
+}
+.quemSomoss1 p {
+    width: 45%;
+    font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
+    margin-right: 2%;
+}
+.quemSomoss1 h1 { 
+    margin-left: 3%;
+    font-size: clamp(2rem,2rem + 1.2vw,3rem)
+}
+
+.conteudo2QuemSomos1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: center;
+}
+.conteudo2QuemSomos1 p {
+    width: 45%;
+    font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
+    margin-right: 2%;
+    border-top: 2px solid #ED8600;
+    padding-top: 5%;
+}
+.conteudo2QuemSomos1 img { 
+    margin-left: 3%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .quemSomos1 {
+        background-color: #000;
+        padding-top: 10%;
+        color: #fff;
+    }
+    .conteudo2QuemSomos1 img {
+        display: none;
+    }
+    .quemSomoss1 {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+    .quemSomoss1 p {
+        width: 98%;
+        margin-left: 2%;
+        margin-top: 4%;
+    }
+    .conteudo2QuemSomos1 p {
+        width: 98%;
+        margin-left: 2%;
+    }
+}
+
+
+@media screen and (max-width:620px) {
+    .quemSomos1 {
+        background-color: #000;
+        padding-top: 15%;
+        color: #fff;
+    }
+
+    .quemSomoss1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 135px; 
+        width: 150px; 
+        height: 55px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: 1; 
+    }
+}
+
+@media screen and (max-width:355px) {
+    .quemSomos1 {
+        background-color: #000;
+        padding-top: 23%;
+        color: #fff;
+    }
+
+    .quemSomoss1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 115px; 
+        width: 120px; 
+        height: 45px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: 1; 
+    }
+}
+
+@media screen and (max-width:250px) {
+    .quemSomos1 {
+        background-color: #000;
+        padding-top: 30%;
+        color: #fff;
+    }
+
+    .quemSomoss1::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width:143px) {
+    .quemSomos1 {
+        background-color: #000;
+        padding-top: 55%;
+        color: #fff;
+    }
+
+}

@@ -2,8 +2,23 @@
     max-width: 2000px;
     margin: auto;
 }
+.homeTress {
+    position: relative;
+}
 .homeTress h1 {
     margin-left: 3.5%;
+    font-size: clamp(2rem,2rem + 1.2vw,3rem)
+}
+.homeTress::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 225px; 
+    width: 150px; 
+    height: 55px; 
+    background: url("../../assets/images/retangulo.png") no-repeat;
+    background-size: cover;
+    z-index: -1; 
 }
 .finalHomeTres h2 {
     width: 70%;
@@ -14,6 +29,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.finalHomeTres h1 {
+    font-size: clamp(2rem,2rem + 1.2vw,2rem)
 }
 .finalHomeTres button {
     background-color: #ED8600;
@@ -29,4 +47,91 @@
 }
 .finalHomeTres button:hover {
     transform: scale(1.2);
+}
+.carouselClientesHomeTres {
+    width: 100%;
+}
+.carouselHomeTresP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carouselHomeTressM {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.carouselHomeTres {
+    width: 70%;
+}
+.carouselHomeTressM {
+    display: none;
+}
+@media screen and (min-width:2000px){
+    .carouselHomeTres {
+        width: 45%;
+    }
+}
+@media screen and (min-width:1801px) and (max-width:2000px) {
+    .carouselHomeTres {
+        width: 45%;
+    }
+}
+@media screen and (min-width:1400px) and (max-width:1800px) {
+    .carouselHomeTres {
+        width: 55%;
+    }
+}
+@media screen and (max-width:850px) {
+    .homeTress::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 180px; 
+        width: 150px; 
+        height: 55px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: -1; 
+    }
+}
+@media screen and (max-width: 768px){
+    .carouselHomeTressM {
+        display: block;
+    }
+    .carouselHomeTres {
+        display: none;
+    }
+}
+@media screen and (max-width:535px) {
+    .homeTress::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 160px; 
+        width: 120px; 
+        height: 44px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: -1; 
+    }
+}
+@media screen and (max-width:330px) {
+    .homeTress::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 140px; 
+        width: 120px; 
+        height: 44px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: -1; 
+    }
+}
+
+
+@media screen and (max-width:270px) {
+    .homeTress::before {
+        display: none;
+    }
 }

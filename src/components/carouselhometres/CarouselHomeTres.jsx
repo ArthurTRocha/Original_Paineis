@@ -1,83 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from 'uuid';
 import { config } from "react-spring";
+import axios from "axios";
+import "./carouselhometres.css"
 
 const CarouselHomeTres = () => {
   const [state, setState] = useState({
     goToSlide: 0,
     offsetRadius: 2,
-    showNavigation: true,
-    config: config.gentle
+    showNavigation: false,
+    config: config.gentle,
+    slides: [] // Armazena as imagens a serem exibidas no carousel
   });
 
-  const slides = [
-    "https://picsum.photos/800/801/?random",
-    "https://picsum.photos/800/802/?random",
-    "https://picsum.photos/600/803/?random",
-    "https://picsum.photos/800/500/?random",
-    "https://picsum.photos/800/804/?random",
-    "https://picsum.photos/500/800/?random",
-    "https://picsum.photos/800/600/?random",
-    "https://picsum.photos/805/800/?random"
-  ].map((imgSrc, index) => ({
-    key: uuidv4(),
-    content: <img src={imgSrc} alt={`Slide ${index + 1}`} />,
-    onClick: () => setState({ goToSlide: index })
-  }));
+  useEffect(() => {
+    // Função para buscar imagens da API
+    const fetchImages = async () => {
+      try {
+        // Substitua "url_da_sua_api" pela URL real da sua API que retorna as imagens
+        const response = await axios.get("https://apioriginalpaineis.shop/api/v1/Imagens/BuscarPorCategoriaId/1");
+        const data = response.data; // Extrai os dados da resposta
+        console.log(data);
+        // Mapeie os dados recebidos para formatá-los corretamente para o carousel
+        const slides = data.map((imageSrc, index) => ({
+          key: uuidv4(),
+          content: (
+            <div className="imagemCarouselHomeTresimg">
+          <img src={`https://apioriginalpaineis.shop/imagens/${imageSrc.nomeImagem}`} 
+          alt={`Slide ${index + 1}`}    
+          />
+          </div>
+          )
+        }));
+        
+        setState(prevState => ({ ...prevState, slides: slides })); // Atualiza o estado com as imagens formatadas
+      } catch (error) {
+        console.error("Erro ao buscar imagens da API:", error);
+      }
+    };
 
-  const onChangeInput = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: parseInt(e.target.value, 10) || 0
-    });
-  };
+    fetchImages();
 
-  const handleTransitionButtonClick = (newConfig) => {
-    setState({ ...state, config: newConfig });
-  };
+    // Configurar o autoplay para mudar automaticamente de slide
+    const interval = setInterval(() => {
+      setState(prevState => ({ ...prevState, goToSlide: (prevState.goToSlide + 1) % prevState.slides.length }));
+    }, 3000); // Tempo em milissegundos entre cada slide
+
+    // Limpar o intervalo quando o componente for desmontado para evitar vazamentos de memória
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+    <div style={{ width: "90%", height: "500px", margin: "0 auto" }}>
       <Carousel
-        slides={slides}
+        slides={state.slides}
         goToSlide={state.goToSlide}
         offsetRadius={state.offsetRadius}
         showNavigation={state.showNavigation}
         animationConfig={state.config}
+        loop={true} // Definindo o loop como true para um loop infinito
+        autoplay={false} // Desativar o autoplay aqui, pois ele será controlado manualmente no useEffect
       />
-      <div style={{ margin: "0 auto", marginTop: "2rem", width: "50%" }}>
-        {/* <label>Go to slide: </label>
-        <input name="goToSlide" onChange={onChangeInput} />
-
-        <label>Offset Radius: </label>
-        <input name="offsetRadius" onChange={onChangeInput} />
-
-        <label>Show navigation: </label> */}
-        {/* <input
-          type="checkbox"
-          checked={state.showNavigation}
-          name="showNavigation"
-          onChange={(e) => {
-            setState({ ...state, showNavigation: e.target.checked });
-          }}
-        /> */}
-
-        <div>
-          {/* <button onClick={() => handleTransitionButtonClick(config.gentle)} disabled={state.config === config.gentle}>
-            Gentle Transition
-          </button>
-          <button onClick={() => handleTransitionButtonClick(config.slow)} disabled={state.config === config.slow}>
-            Slow Transition
-          </button>
-          <button onClick={() => handleTransitionButtonClick(config.wobbly)} disabled={state.config === config.wobbly}>
-            Wobbly Transition
-          </button>
-          <button onClick={() => handleTransitionButtonClick(config.stiff)} disabled={state.config === config.stiff}>
-            Stiff Transition
-          </button> */}
-        </div>
-      </div>
     </div>
   );
 };

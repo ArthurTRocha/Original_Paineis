@@ -5,6 +5,7 @@
     background-position: center center; 
     position: relative;
     padding-bottom: 7%;
+    padding-top: 3%;
 }
 .homeQuatro::before {
     content: "";
@@ -25,6 +26,31 @@
     color: #fff;
     margin-left: 3.5%;
     font-size: clamp(2rem,2rem + 1.2vw,3rem);
+    padding-bottom: 5%;
+}
+.homeQuatroo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 230px; 
+    width: 180px; 
+    height: 65px; 
+    background: url("../../assets/images/retangulo.png") no-repeat;
+    background-size: cover;
+    z-index: 1; 
+}
+
+.ImagemUmHomeQuatro {
+    max-width: 70%;
+    object-fit: cover;
+    margin-right: 23%;
+    margin-bottom: 5%;
+}
+.ImagemDoisHomeQuatro {
+    max-width: 70%;
+    object-fit: cover;
+    margin-left: 23%;
+    margin-top: 5%;
 }
 .conteudoHomeQuatro p {
     color: #fff;
@@ -36,7 +62,41 @@
 .conteudoHomeQuatro {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     gap: 25px;
+}
+
+
+@media screen and (max-width:895px) {
+    .homeQuatroo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 200px; 
+        width: 150px; 
+        height: 55px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: 1; 
+    }
+}
+
+@media screen and (max-width:485px) {
+    .homeQuatroo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 160px; 
+        width: 140px; 
+        height: 51px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: 1; 
+    }
+}
+
+@media screen and (max-width:310px) {
+    .homeQuatroo::before {
+        display: none;
+    }
 }

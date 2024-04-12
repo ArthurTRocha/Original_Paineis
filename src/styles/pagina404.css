@@ -1,0 +1,32 @@
+.pagina404C {
+    max-width: 2000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 3%;
+    padding-top: 2%;
+}
+.imagem404 img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.imagemLogo404 img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.pagina404C h1 {
+    color: #ED8600;
+    font-size: clamp(2rem,2rem + 1.2vw,3rem);
+}
+
+@media screen and (max-width:768px) {
+    .pagina404C {
+        padding-top: 15%;
+    }
+    .pagina404C {
+        gap: 50px;
+    }
+}

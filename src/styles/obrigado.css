@@ -1,0 +1,29 @@
+.obrigadoC {
+    max-width: 2000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 3%;
+}
+.obrigadoC img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.obrigadoC h1 {
+    color: #ED8600;
+    font-size: clamp(2rem,2rem + 1.2vw,3rem);
+}
+
+@media screen and (max-width:768px) { 
+    .obrigadoC {
+        padding-top: 15%;
+    }
+}
+@media screen and (max-width:350px) { 
+    .obrigadoC {
+        padding-top: 35%;
+    }
+}

@@ -1,0 +1,57 @@
+.loginC {
+    max-width: 2000px;
+    margin: auto;
+    border-radius: 2vh;
+    box-shadow: 8px 11px 10px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #ED8600;
+    padding: 4%;
+}
+.loginCC {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.loginC button {
+    background-color: #ED8600;
+    border-radius: 2vh;
+    border: none;
+    color: #fff;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.loginC button:hover {
+    transform: scale(1.1);
+}
+.loginC h1 {
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.loginCC input {
+    height: 35px;
+    padding-left: 2%;
+}
+
+@media screen and (max-width: 450px) {
+    .loginC {
+        max-width: 2000px;
+        margin: auto;
+        border-radius: 2vh;
+        box-shadow: 8px 11px 10px rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid #ED8600;
+        padding: 4%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 180px) {
+    .loginC h2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 90px) {
+    .loginC h1{
+        display: none;
+    }
+}

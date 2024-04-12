@@ -5,7 +5,7 @@ import Email from "../../assets/images/email.png"
 function HomeCinco () {
     return (
         <div className="homeCinco">
-            <div className="homeCincoo">
+            <div className="homeCincoo"  id="homeCincoo">
 
                 <div className="unirTextosImagemHomeCinco">
                 <div className="textoHomeCinco">
@@ -21,9 +21,9 @@ function HomeCinco () {
 
                 <div className="contatoHomeCinco">
 
-                <form action="https://formsubmit.co/arthuteixeira30@gmail.com" method="POST">
+                <form action="https://formsubmit.co/comercial@originalpainies.com.br" method="POST">
                 <input type="hidden" name="_captcha" value="false"/>
-                <input type="hidden" name="_next" value="http://localhost:5173/obrigado"/>
+                <input type="hidden" name="_next" value="https://originalpaineis.com.br/obrigado"/>
 
 
                     <label>
@@ -48,9 +48,18 @@ function HomeCinco () {
                     <label>
                         <select name="selection">
                         <option value="" disabled hidden>Selecione o tipo de serviço</option>
-                        <option value="opcao1">Opção 1</option>
-                        <option value="opcao2">Opção 2</option>
-                        <option value="opcao3">Opção 3</option>
+                        <option value="opcao1">Personalização de frotas</option>
+                        <option value="opcao2">Fachadas</option>
+                        <option value="opcao3">Projetos especiais</option>
+                        <option value="opcao3">Impressos de grande e pequenos formatos</option>
+                        <option value="opcao3">Coberturas e toldos</option>
+                        <option value="opcao3">Adesivo de parede</option>
+                        <option value="opcao3">Totens</option>
+                        <option value="opcao3">Luminosos</option>
+                        <option value="opcao3">Outddores e placas</option>
+                        <option value="opcao3">Letras caixas</option>
+                        <option value="opcao3">Led neon</option>
+                        <option value="opcao3">Outros</option>
                         </select>
                     </label>
                     </div>

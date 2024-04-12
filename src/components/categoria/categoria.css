@@ -1,0 +1,11 @@
+.categoria {
+    max-width: 2000px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 3%;
+}
+.listadeCategorias li {
+    margin-top: 5%;
+    border-top: 0.1vh solid #ED8600;
+}

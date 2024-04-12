@@ -1,0 +1,28 @@
+.login {
+    background-image: url('../assets/images/fundo_homeum.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(rgba(237, 134, 0, 0.8), rgba(130, 74, 0, 0.8)); 
+}
+.loginn {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}

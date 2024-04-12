@@ -16,9 +16,21 @@
     color: #fff;
     margin-left: 3.5%;
     width: 35%;
+    position: relative;
 }
 .textoHomeCinco h1 {
     font-size: clamp(2rem,2rem + 1.2vw,3rem);
+}
+.textoHomeCinco::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px; 
+    width: 180px; 
+    height: 65px; 
+    background: url("../../assets/images/retangulo.png") no-repeat;
+    background-size: cover;
+    z-index: 1; 
 }
 .textoHomeCinco p {
     font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
@@ -81,4 +93,58 @@
 }
 .contatoHomeCinco button:hover {
     transform: translateX(-50%) scale(1.2);
+    background-color: #ED8600;
+}
+
+
+@media screen and (max-width: 768px) {
+    .imagemHomeCinco img {
+       display: none;
+    }
+    .textoHomeCinco {
+        width: 100%;
+    }
+    .contatoHomeCinco form {
+        width: 90%;
+    }
+    .unirTextosImagemHomeCinco {
+        gap: 3%;
+    }
+}
+
+
+@media screen and (max-width:860px) {
+    .textoHomeCinco::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 25px; 
+        width: 150px; 
+        height: 55px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: 1; 
+    }
+}
+
+
+@media screen and (max-width:490px) {
+    .textoHomeCinco::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 25px; 
+        width: 110px; 
+        height: 41.1px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: 1; 
+    }
+}
+
+
+@media screen and (max-width:170px) {
+    .textoHomeCinco::before {
+        display: none;
+    }
 }

@@ -3,6 +3,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     padding-top: 10%;
     padding-bottom: 5%;
+    margin-top: -9px;
 }
 .homeDoiss {
     max-width: 2000px;
@@ -13,11 +14,24 @@
 .textosHomeDois {
     width: 40%;
     margin-left: 3.5%;
+    position: relative;
 }
 .textosHomeDois h1 {
     font-size: clamp(2rem,2rem + 1.2vw,3rem);
     color: #fff;
 }
+.textosHomeDois::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 45px; 
+    width: 190px; 
+    height: 70px; 
+    background: url("../../assets/images/retangulo.png") no-repeat;
+    background-size: cover;
+    z-index: -1; 
+}
+
 .textosHomeDois p {
     font-size: clamp(1rem,1rem + 1.2vw,1.5rem);
     color: #fff;
@@ -103,4 +117,72 @@
 }
 .cardQuatroHD p{
     padding-top: 15%;
+}
+
+@media screen and (max-width:950px) {
+    .textosHomeDois::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 45px; 
+        width: 170px; 
+        height: 63px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: -1; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textosHomeDois p {
+        display: none;
+    }
+    .textosHomeDois button {
+        order: 3;
+    }
+    .cardsServicosHomeDois{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 7px;
+        width: 100%;
+        margin-top: 10%;
+    }
+    .homeDoiss {
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .textosHomeDois button {
+        display: none;
+    }
+}
+@media screen and (max-width:350px) {
+    .textosHomeDois::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 40px; 
+        width: 140px; 
+        height: 52px; 
+        background: url("../../assets/images/retangulo.png") no-repeat;
+        background-size: cover;
+        z-index: -1; 
+    }
+    .cardsServicosHomeDois{
+        /* display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 7px;
+        width: 50%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:250px) {
+    .textosHomeDois::before {
+        display: none;
+    }
 }

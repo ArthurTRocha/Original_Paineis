@@ -1,0 +1,13 @@
+.headerMobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .headerHome {
+        display: none;
+    }
+    .headerMobile {
+        display: block;
+    }
+}
