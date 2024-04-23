@@ -1,8 +1,8 @@
 import React from "react";
 import "./hometres.css"
-import CarouselHomeTres from "../carouselhometres/CarouselHomeTres"
-import CarouselClientes from "../carouselclientes/CarouselClientes";
-import CarouselHomeTresM from "../carouselhometres/CarouselHomeTresM";
+// import CarouselHomeTres from "../carouselhometres/CarouselHomeTres"
+// import CarouselClientes from "../carouselclientes/CarouselClientes";
+// import CarouselHomeTresM from "../carouselhometres/CarouselHomeTresM";
 
 function HomeTres () {
 
@@ -21,11 +21,11 @@ function HomeTres () {
 
             <div className="carouselHomeTresP">
             <div className="carouselHomeTres">
-                <CarouselHomeTres/>
+                {/* <CarouselHomeTres/> */}
             </div>
             </div>
             <div className="carouselHomeTressM">
-                <CarouselHomeTresM/>
+                {/* <CarouselHomeTresM/> */}
             </div>
 
             <div className="finalHomeTres">
@@ -36,7 +36,7 @@ function HomeTres () {
             </div>
 
             <div className="carouselClientesHomeTres">
-                <CarouselClientes/>
+                {/* <CarouselClientes/> */}
             </div>
             
 
