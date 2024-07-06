@@ -13,7 +13,7 @@ function QuemSomos2() {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyA9XQRmt0kb4eIXH2V15cbH7jtWV676e2o">
+    <LoadScript googleMapsApiKey="">
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={15} // Aumentando o zoom para 15
